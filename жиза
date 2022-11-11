@@ -1,0 +1,45 @@
+import turtle, time
+
+turtle.tracer(False)
+turtle.hideturtle()
+turtle.shape()
+turtle.width(5)
+turtle.speed(0)
+
+
+xAsed, yAsed = -0, 0
+def koleso(x, y):
+  turtle.goto(x,y)
+  turtle.circle(50)
+  
+while(True):
+
+  turtle.penup()
+  turtle.goto(xAsed , yAsed)
+  turtle.pendown()
+  
+  koleso(xAsed, yAsed)
+  koleso(xAsed+50, yAsed)
+  koleso(xAsed+60, yAsed)
+  koleso(xAsed+10, yAsed)
+  koleso(xAsed+40, yAsed)
+    
+  turtle.penup()
+  turtle.goto(xAsed+100,yAsed+130)
+  turtle.pendown()
+  turtle.goto(xAsed, yAsed+1100)
+    
+    
+  xAsed = xAsed +1
+  turtle.update()
+  time.sleep(0.01)
+  turtle.clear()
+  
+  
+  
+  
+  
+turtle.done()
+  
+  
+  
